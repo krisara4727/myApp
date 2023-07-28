@@ -2,9 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { connect, useSelector } from "react-redux";
 
 function App() {
   const [count, setCount] = useState(0);
+  const selector = useSelector((state: any) => state.dummy.data);
+  console.log("krishna selec",selector)
 
   return (
     <>
@@ -32,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect()(App);

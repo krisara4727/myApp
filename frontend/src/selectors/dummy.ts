@@ -1,0 +1,1 @@
+export const dummyData = (state: any) => state.dummy.data;
